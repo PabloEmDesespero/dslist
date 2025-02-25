@@ -1,6 +1,7 @@
 package com.devsuperior.dslist.dto;
 
 import com.devsuperior.dslist.entities.Game;
+import com.devsuperior.dslist.projections.GameMinProjection;
 import jakarta.persistence.Column;
 
 public class GameMinDTO {
@@ -20,9 +21,16 @@ public class GameMinDTO {
         title = entity.getTitle(); //Não precisa do "this" pois não tem mais valores repetidos
         shortDescription = entity.getShortDescription();
         imgUrl = entity.getImgUrl();
-        score = entity.getScore();
         year = entity.getYear();
         id = entity.getId();
+    }
+
+    public GameMinDTO(GameMinProjection projection) { //Copiando os dados do "Game" para DTO
+        title = projection.getTitle(); //Não precisa do "this" pois não tem mais valores repetidos
+        shortDescription = projection.getShortDescription();
+        imgUrl = projection.getImgUrl();
+        year = projection.getYear();
+        id = projection.getId();
     }
 
     public Long getId() {
