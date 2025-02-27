@@ -59,3 +59,50 @@ dslist/
 - **PostgreSQL**: Sistema de gerenciamento de banco de dados relacional para produção.
 - **Maven**: Ferramenta de automação de compilação e gerenciamento de dependências.
 
+## Configuração e Execução
+
+1. Clone o repositório usando a biblioteca git no terminal:
+git clone https://github.com/seu-usuario/dslist.git
+
+ Navegue até o diretório do projeto pelo terminal:
+   cd dslist
+
+3. Construa o projeto com este comando no termianl:
+   ./mvnw clean install
+
+4. Execute a aplicação:
+   ./mvnw spring-boot:run
+
+A aplicação estará disponível em `http://localhost:8080`.
+
+## Endpoints da API
+
+- `GET /games`: Lista todos os jogos cadastrados.
+- `GET /games/{id}`: Retorna detalhes de um jogo específico.
+- `POST /games`: Cadastra um novo jogo.
+- `PUT /games/{id}`: Atualiza informações de um jogo existente.
+- `DELETE /games/{id}`: Remove um jogo do sistema.
+- `GET /lists`: Retorna todas as listas de jogos.
+- `GET /lists/{id}/games`: Retorna os jogos de uma lista específica.
+- `POST /lists`: Cria uma nova lista de jogos.
+- `POST /lists/{listId}/replacement`: Reordena os jogos em uma lista.
+
+## Banco de Dados
+
+- **Desenvolvimento**: Utiliza H2, um banco de dados em memória, para facilitar testes e desenvolvimento local.
+- **Produção**: Configurado para usar PostgreSQL, oferecendo persistência robusta e escalabilidade.
+
+O esquema do banco de dados é gerado automaticamente pelo Hibernate com base nas entidades JPA definidas no projeto.
+
+## Contribuindo
+
+Contribuições são bem-vindas! Se você encontrar bugs ou tiver sugestões de melhorias, por favor:
+
+1. Abra uma issue descrevendo o problema ou a sugestão.
+2. Fork o repositório e crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`).
+3. Faça commit de suas mudanças (`git commit -m 'Add some AmazingFeature'`).
+4. Push para a branch (`git push origin feature/AmazingFeature`).
+5. Abra um Pull Request.
+
+## Contato
+Pelo proprio github
