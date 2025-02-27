@@ -94,6 +94,11 @@ A aplicação estará disponível em `http://localhost:8080`.
 
 O esquema do banco de dados é gerado automaticamente pelo Hibernate com base nas entidades JPA definidas no projeto.
 
+# Login do banco de dados:
+# nome: sa
+# nao tem senha
+
+
 ## Contribuindo
 
 Contribuições são bem-vindas! Se você encontrar bugs ou tiver sugestões de melhorias, por favor:
