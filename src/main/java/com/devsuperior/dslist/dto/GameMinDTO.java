@@ -29,7 +29,7 @@ public class GameMinDTO {
         title = projection.getTitle(); //Não precisa do "this" pois não tem mais valores repetidos
         shortDescription = projection.getShortDescription();
         imgUrl = projection.getImgUrl();
-        year = projection.getYear();
+        year = projection.getGameYear();
         id = projection.getId();
     }
 
